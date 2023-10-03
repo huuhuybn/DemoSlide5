@@ -8,8 +8,9 @@
 <a href="index.php?url=news">News</a>
 <a href="index.php?url=category">Category</a>
 <a href="index.php?url=uploadForm">Upload Form</a>
-<a href="index.php?url=login">Login</a>
+<a href="index.php?url=showLogin">Login</a>
 <a href="index.php?url=register">Register</a>
+<a href="index.php?url=logout">Log Out</a>
 <hr>
 <?php
 // viet dieu huong noi dung website bang cach kiem tra if else
@@ -34,8 +35,11 @@ $route->addRoute('category', [demoRoute\CatControllers::class, 'show']);
 // và nhận file để lưu vào thư mục uploads
 $route->addRoute('uploadForm',[\demoRoute\UploadControllers::class,'show']);
 $route->addRoute('createFile',[\demoRoute\UploadControllers::class,'createFile']);
-$route->addRoute('login',[UserControllers::class,'showLogin']);
+$route->addRoute('showLogin',[UserControllers::class,'showLogin']);
+$route->addRoute('login',[UserControllers::class,'login']);
 $route->addRoute('register',[UserControllers::class,'showRegister']);
+$route->addRoute('createUser',[UserControllers::class,'register']);
+$route->addRoute('logout',[UserControllers::class,'logout']);
 // lay ra hàm trc đó đã thêm trong route
 $handler = $route->getRoute($url);
 call_user_func($handler); // thuc thi handler bang call_user_func
