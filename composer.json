@@ -1,0 +1,19 @@
+{
+    "name": "huuhuy/demo-slide5",
+    "autoload": {
+        "psr-4": {
+            "Huuhuy\\DemoSlide5\\":
+            ["app/Controllers","app/","app/Views","app/Models"],
+            "demoRoute\\" : [""]
+        }
+    },
+    "authors": [
+        {
+            "name": "HuyNguyen",
+            "email": "huuhuybn@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
