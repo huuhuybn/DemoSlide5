@@ -1,5 +1,5 @@
 <?php
-namespace demoRoute;
+namespace Huuhuy\DemoSlide5;
 class CatControllers
 {
     public static function show(){

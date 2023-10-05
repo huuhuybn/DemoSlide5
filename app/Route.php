@@ -1,5 +1,5 @@
 <?php
-namespace demoRoute;
+namespace Huuhuy\DemoSlide5;
 class Route
 {
     public array $routes;

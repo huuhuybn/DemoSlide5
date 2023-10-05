@@ -1,20 +1,18 @@
 <?php
 
-namespace demoRoute;
-
+namespace Huuhuy\DemoSlide5;
 class DBConnection
 {
     private $connection;
-
     public function connect(){
-        $host = 'sql.freedb.tech';
-        $databasename ='freedb_fpolyhn';
-        $username = 'freedb_underroot';
-        $password = '26Ke2xWThh4R$WJ';
-        $this->connection = new \mysqli($host,$username,$password,$databasename);
-        if ($this->connection->connect_error){
-            die('Loi ket noi co so du lieu');
-        }
+        $host = $_ENV['DB_HOST'];
+        $dbname= $_ENV['DB_NAME'];
+        $username = $_ENV['DB_USERNAME'];
+        $password = $_ENV['DB_PASSWORD'];;
+        $this->connection =
+            new \PDO("mysql:host=$host; dbname=$dbname; charset=utf8",
+                $username, $password);  // thực hiện kết nối đến database
         return $this->connection;
     }
+
 }

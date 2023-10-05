@@ -1,5 +1,5 @@
 <?php
-
+namespace Huuhuy\DemoSlide5;
 class NewControllers
 {
     public static function show(){
