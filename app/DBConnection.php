@@ -4,6 +4,7 @@ namespace Huuhuy\DemoSlide5;
 class DBConnection
 {
     private $connection;
+
     public function connect(){
         $host = $_ENV['DB_HOST'];
         $dbname= $_ENV['DB_NAME'];
@@ -14,5 +15,4 @@ class DBConnection
                 $username, $password);  // thực hiện kết nối đến database
         return $this->connection;
     }
-
 }
