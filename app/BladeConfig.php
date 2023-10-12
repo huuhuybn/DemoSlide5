@@ -1,4 +1,5 @@
 <?php
+namespace Huuhuy\DemoSlide5;
 use eftec\bladeone\BladeOne;
 
 $view  = './app/Views'; // dinh nghia thu muc chia view!

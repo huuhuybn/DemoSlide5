@@ -2,8 +2,9 @@
 
 namespace Huuhuy\DemoSlide5;
 require './app/DBConnection.php';
+
 //require './app/BladeConfig.php';
-use eftec\bladeone\BladeOne;
+
 
 class UserControllers
 {
@@ -17,12 +18,14 @@ class UserControllers
         }
         //  data chua các cặp giá trị key và value
         // cần hiển thị trong file login.blade.php
+        $arr = [3, 5, 6, 4, 3, 4, 6, 78, 5];
         $data = ['name' => 'Huy Nguyen',
-            'address' => 'HN - TRUNG VAN'];
-
-        $view  = './app/Views'; // dinh nghia thu muc chia view!
-        $cache = './app/Cache'; // thu muc cache cho bladeone
-        $blade = new BladeOne($view,$cache);
+            'address' => 'HN - TRUNG VAN',
+            'diem' => 10,
+            'isPass' => true,
+            'arr' => $arr
+        ];
+        include './app/BladeConfig.php';
 
         echo $blade->run('login', $data);
         // cu phap bladeone : for, foreach, if else, switchcase
